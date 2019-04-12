@@ -1,0 +1,137 @@
+$i: unquote("!important");
+$red: #b71f38;
+
+/* CSS3 calc() function to perform calculations */
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: calc(#{$expression}); 
+} 
+
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+
+%display-flex{
+    
+    display:flex $i;
+    align-content: center $i;
+    justify-content: space-between $i;
+    display: -ms-flexbox   $i;
+	display: -webkit-flex  $i;
+	
+
+	-ms-flex-align: center  $i;
+	-webkit-align-items: center  $i;
+	-webkit-box-align: center  $i;
+
+	align-items: center  $i;
+
+}
+
+
+body,html
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+       h3
+        {
+            font-family: 'BitterRegular',serif;
+            font-weight: 300;
+            color: #fff;
+           
+            
+          
+        }
+}
+
+#mobile-nav
+{
+    
+   
+    margin: 0 auto;
+    @extend %display-flex;
+    width: 100%;
+    min-height: 90px;
+    max-height: 90px;
+    padding: 15px;
+    border-bottom: 1ps solid #333;
+    background: rgba(12,12,13,.78);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+   
+    
+    
+
+    
+    #menu-bar 
+    {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        
+       
+        
+    }
+    
+    #menu-bar i 
+    {
+        font-size: 4.5rem;
+        margin: 0 auto;
+        color: #ffffff;
+        
+    }
+    
+    #menu-search
+    {
+        font-size: 4.5rem;
+        color: #ffffff;
+    }
+    
+    
+    
+    
+    
+}
