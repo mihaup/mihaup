@@ -48,15 +48,38 @@ body h3, html h3 {
 #mobile-nav #menu-search {
   font-size: 4.5rem;
   color: #ffffff;
-cursor: pointer;
 }
 #mobile-nav span {
   font-size: 4.5rem;
   color: #ffffff;
 }
 
-h3 {
-  font: 13px;
+#mobile-open-nav {
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  background: #181716;
+}
+#mobile-open-nav ul {
+  list-style-type: none;
+  text-decoration: none;
+  padding-top: 120px;
+}
+#mobile-open-nav ul li {
+  padding: 5px;
+}
+#mobile-open-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 5px;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+#mobile-open-nav ul li a:hover {
+  color: #7F7F7F;
 }
 
 /*# sourceMappingURL=style.css.map */

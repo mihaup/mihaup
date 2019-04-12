@@ -48,6 +48,14 @@ $red: #b71f38;
 	-webkit-transform-origin: $origin;
           transform-origin: $origin;
 }
+// transition
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
 
 
 %display-flex{
@@ -141,7 +149,47 @@ body,html
     
 }
 
-h3
+#mobile-open-nav
 {
-    font: 13px;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    background: #181716;
+   
+    
+    ul 
+    {   list-style-type: none;
+        text-decoration: none;
+       padding-top: 120px;
+        
+
+        
+        
+        
+        li 
+        { 
+            padding: 5px;
+        
+           
+            
+            a 
+            {
+                color: #fff;
+                text-decoration: none;
+                font-size: 2rem;
+                padding: 5px;
+                @include transition(.2s);
+                
+                
+                
+            }
+            
+            a:hover
+            {
+                color: #7F7F7F;
+            }
+            
+        }
+    }
+    
 }
