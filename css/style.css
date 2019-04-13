@@ -58,6 +58,7 @@ body h3, html h3 {
   width: 100%;
   min-height: 100vh;
   height: 100vh;
+  height: auto;
   background: #181716;
 }
 #mobile-open-nav ul {
